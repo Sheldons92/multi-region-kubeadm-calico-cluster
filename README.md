@@ -22,13 +22,13 @@ Each region corresponds to a cluster and the scripts in each folder, use the bel
 1. Run the master set up script on the node allocated as your master
 
 ```
-curl https://raw.githubusercontent.com/Sheldons92/multi-region-kubeadm-calico-cluster/main/Region_1/master.sh | bash
+curl https://raw.githubusercontent.com/Sheldons92/multi-region-kubeadm-calico-cluster/manifest-approach/Region_1/master.sh | bash
 ```
 
 2. Run the worker set up script on the node allocated as your master
 
 ```
-curl https://raw.githubusercontent.com/Sheldons92/multi-region-kubeadm-calico-cluster/main/Region_1/worker.sh | bash
+curl https://raw.githubusercontent.com/Sheldons92/multi-region-kubeadm-calico-cluster/manifest-approach/Region_1/worker.sh | bash
 ```
 
 3. Using the output from the master node script, run the kubeadm join command using sudo this will look something like the below
@@ -47,7 +47,7 @@ kubectl get pods -A -o wide
 5. Install the Calico manifest
 
 ```
-kubectl apply -f https://raw.githubusercontent.com/Sheldons92/multi-region-kubeadm-calico-cluster/main/Region_1/calico.yaml 
+kubectl apply -f https://raw.githubusercontent.com/Sheldons92/multi-region-kubeadm-calico-cluster/manifest-approach/Region_1/calico.yaml 
 ```
 
 # Instructions Region 2
@@ -55,13 +55,13 @@ kubectl apply -f https://raw.githubusercontent.com/Sheldons92/multi-region-kubea
 1. Run the master set up script on the node allocated as your master
 
 ```
-curl https://raw.githubusercontent.com/Sheldons92/multi-region-kubeadm-calico-cluster/main/Region_2/master.sh | bash
+curl https://raw.githubusercontent.com/Sheldons92/multi-region-kubeadm-calico-cluster/manifest-approach/Region_2/master.sh | bash
 ```
 
 2. Run the worker set up script on the node allocated as your master
 
 ```
-curl https://raw.githubusercontent.com/Sheldons92/multi-region-kubeadm-calico-cluster/main/Region_2/worker.sh | bash
+curl https://raw.githubusercontent.com/Sheldons92/multi-region-kubeadm-calico-cluster/manifest-approach/Region_2/worker.sh | bash
 ```
 
 3. Using the output from the master node script, run the kubeadm join command using sudo this will look something like the below
@@ -80,7 +80,7 @@ kubectl get pods -A -o wide
 5. Install the Calico manifest
 
 ```
-kubectl apply -f https://raw.githubusercontent.com/Sheldons92/multi-region-kubeadm-calico-cluster/main/Region_1/calico.yaml 
+kubectl apply -f https://raw.githubusercontent.com/Sheldons92/multi-region-kubeadm-calico-cluster/manifest-approach/Region_2/calico.yaml 
 ```
 
 # Instructions Region 3
@@ -88,13 +88,13 @@ kubectl apply -f https://raw.githubusercontent.com/Sheldons92/multi-region-kubea
 1. Run the master set up script on the node allocated as your master
 
 ```
-curl https://raw.githubusercontent.com/Sheldons92/multi-region-kubeadm-calico-cluster/main/Region_3/master.sh | bash
+curl https://raw.githubusercontent.com/Sheldons92/multi-region-kubeadm-calico-cluster/manifest-approach/Region_3/master.sh | bash
 ```
 
 2. Run the worker set up script on the node allocated as your master
 
 ```
-curl https://raw.githubusercontent.com/Sheldons92/multi-region-kubeadm-calico-cluster/main/Region_3/worker.sh | bash
+curl https://raw.githubusercontent.com/Sheldons92/multi-region-kubeadm-calico-cluster/manifest-approach/Region_3/worker.sh | bash
 ```
 
 3. Using the output from the master node script, run the kubeadm join command using sudo this will look something like the below
@@ -113,5 +113,5 @@ kubectl get pods -A -o wide
 5. Install the Calico manifest
 
 ```
-kubectl apply -f https://raw.githubusercontent.com/Sheldons92/multi-region-kubeadm-calico-cluster/main/Region_1/calico.yaml 
+kubectl apply -f https://raw.githubusercontent.com/Sheldons92/multi-region-kubeadm-calico-cluster/manifest-approach/Region_3/calico.yaml 
 ```
