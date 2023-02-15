@@ -44,16 +44,10 @@ sudo kubeadm join 10.10.13.8:6443 --token XXXXXXXXXX \
 kubectl get pods -A -o wide
 ```
 
-5. Install the Calico operator
+5. Install the Calico manifest
 
 ```
-kubectl create -f https://raw.githubusercontent.com/projectcalico/calico/v3.25.0/manifests/tigera-operator.yaml
-```
-
-6. Apply the custom-resources file for region 1
-
-```
-kubectl apply -f https://raw.githubusercontent.com/Sheldons92/multi-region-kubeadm-calico-cluster/main/Region_1/custom-resources.yaml
+kubectl apply -f https://raw.githubusercontent.com/Sheldons92/multi-region-kubeadm-calico-cluster/main/Region_1/calico.yaml 
 ```
 
 # Instructions Region 2
@@ -83,17 +77,12 @@ sudo kubeadm join 10.10.13.8:6443 --token XXXXXXXXXX \
 kubectl get pods -A -o wide
 ```
 
-5. Install the Calico operator
+5. Install the Calico manifest
 
 ```
-kubectl create -f https://raw.githubusercontent.com/projectcalico/calico/v3.25.0/manifests/tigera-operator.yaml
+kubectl apply -f https://raw.githubusercontent.com/Sheldons92/multi-region-kubeadm-calico-cluster/main/Region_1/calico.yaml 
 ```
 
-6. Apply the custom-resources file for region 2
-
-```
-kubectl apply -f https://raw.githubusercontent.com/Sheldons92/multi-region-kubeadm-calico-cluster/main/Region_2/custom-resources.yaml
-```
 # Instructions Region 3
 
 1. Run the master set up script on the node allocated as your master
@@ -121,14 +110,8 @@ sudo kubeadm join 10.10.13.8:6443 --token XXXXXXXXXX \
 kubectl get pods -A -o wide
 ```
 
-5. Install the Calico operator
+5. Install the Calico manifest
 
 ```
-kubectl create -f https://raw.githubusercontent.com/projectcalico/calico/v3.25.0/manifests/tigera-operator.yaml
-```
-
-6. Apply the custom-resources file for region 3
-
-```
-kubectl apply -f https://raw.githubusercontent.com/Sheldons92/multi-region-kubeadm-calico-cluster/main/Region_3/custom-resources.yaml
+kubectl apply -f https://raw.githubusercontent.com/Sheldons92/multi-region-kubeadm-calico-cluster/main/Region_1/calico.yaml 
 ```
